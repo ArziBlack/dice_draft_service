@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from "express";
+import { TypedNextFn, TypedRequest, TypedResponse } from "../../typings/express";
 
-export const error_handler = (err: unknown, req: Request, res: Response, next: NextFunction) => {
+export const error_handler = (err: unknown, req: TypedRequest, res: TypedResponse<APIErrorResponse>, next: TypedNextFn) => {
     if (err instanceof Error) {
         res.status(500).json({
             success: false,

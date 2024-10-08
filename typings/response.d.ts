@@ -1,15 +1,15 @@
 type APIResponse<T> = APISuccessResponse<T> | APIErrorResponse;
 
-type APISuccessResponse<T> =
+type APISuccessResponse<any> =
 {
     success: boolean;
     message: string;
-    data: T;
+    data?: any;
 }
 
 type APIErrorResponse =
 {
     success: boolean;
     message: string;
-    errors: Record<string, string[]> | unknown;
+    errors?: Record<string, string[]> | unknown;
 }
