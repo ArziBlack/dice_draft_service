@@ -1,8 +1,11 @@
-import express, { Application, json } from "express";
 import { log } from "console";
 import { PORT } from "./config";
 import index from "./routes/index"
+import { connectDB } from "./config/db";
+import express, { Application, json } from "express";
 import { error_handler } from "./middleware/error_handler";
+
+connectDB();
 
 if (!PORT)
 {
