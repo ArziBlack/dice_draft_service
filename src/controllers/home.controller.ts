@@ -44,7 +44,7 @@ export const delete_home_post = async (req: TypedRequest, res: TypedResponse<API
 
         res.status(201).json({
             success: true,
-            message: "Home post created successfully",
+            message: "Home post deleted successfully",
             data: home_response
         });
     } catch (error) {
@@ -64,7 +64,7 @@ export const update_home_post = async (req: TypedRequest, res: TypedResponse<API
 
         res.status(http_status.OK).json({
             success: true,
-            message: "Home post created successfully",
+            message: "Home post updated successfully",
             data: home_response
         });
     } catch (error) {
