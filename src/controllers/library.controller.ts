@@ -31,7 +31,7 @@ export const get_library_post = async (req: TypedRequest, res: TypedResponse<API
     }
 }
 
-export const delete_home_post = async (req: TypedRequest, res: TypedResponse<APISuccessResponse<ILibrary> | APIErrorResponse>, next: TypedNextFn) => {
+export const delete_library_post = async (req: TypedRequest, res: TypedResponse<APISuccessResponse<ILibrary> | APIErrorResponse>, next: TypedNextFn) => {
     try {
         const id = req.params.id
 
