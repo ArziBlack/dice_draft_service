@@ -1,4 +1,3 @@
-import { log } from "console";
 import { PORT } from "./config";
 import index from "./routes/index"
 import { connectDB } from "./config/db";
@@ -18,9 +17,8 @@ app.use(json());
 
 app.use(error_handler);
 
-app.use("/api", index)
+app.use("/api/v1", index);
 
-log("test server started... and OK")
 app.listen(PORT, ()=> {
     console.log(`server started on port ${PORT}`);
 });

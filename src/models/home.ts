@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 import { IHome } from "../interfaces/response";
 
 const homeSchema = new Schema({
-    featured_videos: Array<String>,
+    // featured_videos: Array<String>,
     title: String,
     description: String,
     image: String,

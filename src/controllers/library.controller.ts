@@ -22,7 +22,7 @@ export const get_library_post = async (req: TypedRequest, res: TypedResponse<API
 
         res.status(201).json({
             success: true,
-            message: "Library post created successfully",
+            message: "Library fetched successfully",
             data: home_response
         });
     } catch (error) {

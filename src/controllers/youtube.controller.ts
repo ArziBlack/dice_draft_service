@@ -3,16 +3,15 @@ import http_status from "http-status";
 import { oauth2_client } from "../services/google_api.service";
 import { TypedNextFn, TypedRequest, TypedResponse } from "../../typings/express";
 
-
-export const check_subscription = async (req: TypedRequest, res: TypedResponse<APISuccessResponse<string>>, next: TypedNextFn) => {
+export const check_subscription = async (req: TypedRequest, res: TypedResponse<APISuccessResponse<{ is_subscribed: boolean }> | APIErrorResponse>, next: TypedNextFn) => {
     try {
         const { accessToken, channelId } = req.body;
 
         if (!accessToken && channelId) {
-            return res.status(http_status.BAD_REQUEST).json({ success: false, message: "Access token and channelId is required" });
+            res.status(http_status.BAD_REQUEST).json({ success: false, message: "Access token and channelId is required" });
         }
 
-        await oauth2_client.setCredentials({ access_token: accessToken });
+        oauth2_client.setCredentials({ access_token: accessToken });
 
         const youtube = google.youtube({ version: 'v3', auth: oauth2_client });
 
@@ -27,7 +26,7 @@ export const check_subscription = async (req: TypedRequest, res: TypedResponse<A
         const is_subscribed = subscriptions?.some((sub) => sub.snippet?.resourceId?.channelId === channelId);
 
         if (!is_subscribed) {
-            return res.status(200).json({
+            res.status(200).json({
                 success: true,
                 message: "You are not subscribed to this channel",
                 data: {
@@ -36,7 +35,7 @@ export const check_subscription = async (req: TypedRequest, res: TypedResponse<A
             })
         }
 
-        return res.status(http_status.OK).json({
+        res.status(http_status.OK).json({
             success: true,
             message: "You are subscribed to this channel",
             data: {
