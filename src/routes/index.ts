@@ -7,11 +7,11 @@ import admin_router from "./app.routes";
 
 const router = Router();
 
-router.get("/dice", (_, res)=> {
-    res.status(http_status.OK).json({
-        message: "Dice rolled successfully",
-        success: true
-    })
+router.get("/dice", (_, res) => {
+  res.status(http_status.OK).json({
+    message: "Dice rolled successfully",
+    success: true,
+  });
 });
 
 router.use("/init", initialize_router);

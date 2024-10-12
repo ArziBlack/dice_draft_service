@@ -1,19 +1,22 @@
 import { model, Schema } from "mongoose";
 import { IHome } from "../interfaces/response";
 
-const homeSchema = new Schema({
+const homeSchema = new Schema(
+  {
     // featured_videos: Array<String>,
     title: String,
     description: String,
     image: String,
-    content: String
-}, { timestamps: true });
+    content: String,
+  },
+  { timestamps: true },
+);
 
-homeSchema.set('toJSON', {
-    transform: (_doc, ret)=> {
-        delete ret.__v;
-        return ret;
-    }
+homeSchema.set("toJSON", {
+  transform: (_doc, ret) => {
+    delete ret.__v;
+    return ret;
+  },
 });
 
-export const Home = model<IHome>('Home', homeSchema); 
+export const Home = model<IHome>("Home", homeSchema);

@@ -1,5 +1,5 @@
 {
-    "watch": ["src", "config"],
-    "ignore": ["node_modules", "*.test,js"],
-    "ext": "js, json, ts"
+  "watch": ["src", "config"],
+  "ignore": ["node_modules", "*.test,js"],
+  "ext": "js, json, ts"
 }

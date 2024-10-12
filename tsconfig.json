@@ -1,29 +1,29 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript. */
-    
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript. */,
+
     /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
-    "rootDir": "./src",  
-    "outDir": "./dist",                                /* Specify the root folder for your source files. */
-    "moduleResolution": "node",                          /* Specify how TypeScript looks up a file from a given module specifier. */
-    
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "rootDir": "./src",
+    "outDir": "./dist" /* Specify the root folder for your source files. */,
+    "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
+
     /* Interop Constraints */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
     /* Type Checking */
-    "strict": true,                                      /* Enable all strict type-checking options. */
+    "strict": true /* Enable all strict type-checking options. */,
 
     /* Emit */
-    "sourceMap": true,                                   /* Create source map files for emitted JavaScript. */
+    "sourceMap": true /* Create source map files for emitted JavaScript. */,
 
     /* Completeness */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "exclude": [
-    "node_modules",                                      /* Exclude dependencies from compilation. */
-    "dist"                                               /* Exclude built files from compilation. */
+    "node_modules" /* Exclude dependencies from compilation. */,
+    "dist" /* Exclude built files from compilation. */
   ]
 }

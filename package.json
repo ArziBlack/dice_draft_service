@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "start": "pm2 start dist/server.js --name ed_service",
-    "build": "tsc",
+    "build": "tsc -p .",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{js,ts,tsx,json}",
     "prod": "pm2 start dist/server.js --name ed_service",

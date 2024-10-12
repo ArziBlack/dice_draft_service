@@ -1,6 +1,16 @@
 import { Router } from "express";
-import { create_home_post, delete_home_post, get_home_post, update_home_post } from "../controllers/home.controller";
-import { create_library_post, delete_library_post, get_library_post, update_library_post } from "../controllers/library.controller";
+import {
+  create_home_post,
+  delete_home_post,
+  get_home_post,
+  update_home_post,
+} from "../controllers/home.controller";
+import {
+  create_library_post,
+  delete_library_post,
+  get_library_post,
+  update_library_post,
+} from "../controllers/library.controller";
 
 const router = Router();
 
