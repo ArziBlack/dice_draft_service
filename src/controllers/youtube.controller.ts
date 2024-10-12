@@ -7,7 +7,7 @@ export const check_subscription = async (req: TypedRequest, res: TypedResponse<A
     try {
         const { accessToken, channelId } = req.body;
 
-        if (!accessToken && channelId) {
+        if (!accessToken && !channelId) {
             res.status(http_status.BAD_REQUEST).json({ success: false, message: "Access token and channelId is required" });
         }
 

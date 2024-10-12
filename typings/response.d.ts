@@ -4,7 +4,7 @@ type APISuccessResponse<any> =
 {
     success: boolean;
     message: string;
-    data?: any;
+    data?: any | null;
 }
 
 type APIErrorResponse =

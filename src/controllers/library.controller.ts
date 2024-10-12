@@ -39,7 +39,7 @@ export const delete_library_post = async (req: TypedRequest, res: TypedResponse<
             res.status(http_status.BAD_REQUEST).json({ success: false, message: "id is required!" });
         }
 
-        const home_response = await Library.findByIdAndDelete({ _id: id });
+        const home_response = await Library.findByIdAndDelete({ _id: id }).orFail( new Error(`could not find the specified id: ${id}`))
 
         res.status(201).json({
             success: true,
