@@ -5,6 +5,7 @@ import {
   TypedResponse,
 } from "../../typings/express";
 import { JWT_SECRET } from "../config";
+import { APIErrorResponse } from "../../typings/response";
 
 export const verify_token = async (
   req: TypedRequest,

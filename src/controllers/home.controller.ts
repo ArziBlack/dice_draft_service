@@ -3,6 +3,7 @@ import {
   TypedRequest,
   TypedResponse,
 } from "../../typings/express";
+import { APIErrorResponse, APISuccessResponse } from "../../typings/response";
 import { IHome } from "../interfaces/response";
 import { Home } from "../models/home";
 import http_status from "http-status";

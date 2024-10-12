@@ -3,6 +3,7 @@ import {
   TypedRequest,
   TypedResponse,
 } from "../../typings/express";
+import { APIErrorResponse } from "../../typings/response";
 
 export const error_handler = (
   err: unknown,

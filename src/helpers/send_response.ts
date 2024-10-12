@@ -1,3 +1,5 @@
+import { APIResponse, APISuccessResponse } from "../../typings/response";
+
 export const send_response = <T>({
   success,
   message,
