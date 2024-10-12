@@ -11,7 +11,7 @@
     "format": "prettier --write \"**/*.{js,ts,tsx,json}",
     "prod": "pm2 start dist/server.js --name ed_service",
     "logs": "pm2 logs",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
