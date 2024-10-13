@@ -12,7 +12,7 @@ export const verify_token = async (
   res: TypedResponse<APIErrorResponse>,
   next: TypedNextFn,
 ) => {
-  const auth_header = await req.headers["authorization"];
+  const auth_header = req.headers["authorization"];
   if (!auth_header) {
     return res
       .status(401)
